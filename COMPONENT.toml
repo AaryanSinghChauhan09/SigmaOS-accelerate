@@ -1,16 +1,16 @@
 [component]
 name = "SigmaOS-accelerate"
 tier = 2
-stability = "scaffold"
+stability = "beta"
 language = "rust"
-description = "This repository is currently a minimal no_std component identity scaffold. Its library exposes a Component named SigmaOS-accelerate."
+description = "Hardware acceleration framework with GPU/CPU/NPU detection, compute capability, and memory management"
 upstream = []
 
 [contract]
-provides = ["component"]
-depends_on = ["SigmaOS-system"]
+provides = ["hardware-acceleration", "gpu-management", "compute-capability"]
+depends_on = []
 
 [maturity]
-status = "Scaffold"
-test_evidence = "Compiles and passes AAA unit tests"
-next_milestone = "Hardware and runtime integration"
+status = "Implemented"
+test_evidence = "cargo test --offline unit tests pass"
+next_milestone = "CUDA/OpenCL integration and kernel launch support"
