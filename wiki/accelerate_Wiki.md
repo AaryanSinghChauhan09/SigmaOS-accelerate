@@ -1,63 +1,50 @@
-# SigmaOS-accelerate Component Wiki
+# SigmaOS-SigmaOS-accelerate Component Wiki
 
 ## Overview
-SigmaOS-accelerate is a SigmaOS component providing hardware acceleration framework with GPU/CPU/NPU detection, compute capability, and memory management. It serves as the foundation for hardware-accelerated computing within the SigmaOS ecosystem.
+SigmaOS-SigmaOS-accelerate provides Hardware acceleration framework with GPU/CPU/NPU detection, compute capability, and memory management for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Hardware Abstraction
-- Fail-Fast on Unsupported Hardware
-- Deterministic Detection
-- Clear Abstraction Layer
-- Composition over Inheritance for hardware backends
+- SigmaOS-accelerate Abstraction
+- Fail-Fast on SigmaOS-accelerate Initialization Errors
+- Deterministic SigmaOS-accelerate Setup
+- Clear Abstraction Over SigmaOS-accelerate APIs
+- Composition over Inheritance for SigmaOS-accelerate extensions
 
 ## Architecture
-SigmaOS-accelerate follows a hardware abstraction layer pattern:
-- **Detection Module**: Identifies available hardware (GPU, CPU, NPU)
-- **Capability Module**: Reports compute capabilities and memory info
-- **Management Module**: Handles resource allocation and scheduling
-- **Backend Abstraction**: Composition of different hardware backend implementations
+SigmaOS-SigmaOS-accelerate follows a SigmaOS-accelerate pattern:
+- **SigmaOS-accelerate Core**: Provides SigmaOS-accelerate support, SigmaOS-accelerate management, and SigmaOS-accelerate tracking
+- **Management**: Supports SigmaOS-accelerate management, SigmaOS-accelerate configuration, and SigmaOS-accelerate lifecycle
+- **Tracking**: Supports SigmaOS-accelerate status, SigmaOS-accelerate tracking, and SigmaOS-accelerate lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-accelerate configurations or unsupported SigmaOS-accelerate types
 
 ## API
 The component provides the following public APIs:
-- `hardware_acceleration::detect()` - Detect available acceleration hardware
-- `hardware_acceleration::Capability` - Struct with compute capability info
-- `gpu::Management` - GPU resource management
-- `npu::Management` - NPU resource management
-- Error types for unsupported hardware scenarios
+-  - Manage a SigmaOS-accelerate by given configuration
+-  - Register a SigmaOS-accelerate by given name
+-  - Get SigmaOS-accelerate status and SigmaOS-accelerate availability
+-  - Track SigmaOS-accelerate management and SigmaOS-accelerate tracking
+- Error types for SigmaOS-accelerate failure scenarios or unsupported SigmaOS-accelerate types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific hardware configuration
-2. **Act**: Execute the code under test (detection, capability query)
-3. **Assert**: Verify the expected hardware detection results
+1. **Arrange**: Set up test environment with specific SigmaOS-accelerate configuration
+2. **Act**: Execute the code under test (SigmaOS-accelerate init, SigmaOS-accelerate management)
+3. **Assert**: Verify the expected SigmaOS-accelerate results
 
 Example:
-```rust
-#[test]
-fn test_hardware_detection_aaa() {
-    // Arrange
-    let expected_backends = vec!["cpu", "gpu"];
-    
-    // Act
-    let available = hardware_acceleration::detect();
-    
-    // Assert
-    assert!(available.contains(&"cpu".to_string()));
-    // NPU may not be available in test environment
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Hardware detection is best-effort; gracefully degrades on unsupported hardware
-- Comprehensive error types for all failure scenarios
-- Unit tests provided for detection logic
-- Integration tests for full hardware initialization
+- Follows Rust best practices with 
+- SigmaOS-accelerate initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-accelerate failure scenarios
+- Unit tests provided for SigmaOS-accelerate management and configuration
+- Integration tests for full SigmaOS-accelerate system with actual SigmaOS-accelerate integration
 
 ## TODO
-- Add CUDA/OpenCL backend implementation
-- Expand NPU detection capabilities
-- Add memory management APIs
-- Create integration tests with actual hardware
-- Expand capability reporting
+- Add support for additional SigmaOS-accelerate types
+- Expand SigmaOS-accelerate capabilities (SigmaOS-accelerate features, SigmaOS-accelerate configurations, SigmaOS-accelerate tracking)
+- Add lifecycle features (SigmaOS-accelerate tracking, SigmaOS-accelerate lifecycle, SigmaOS-accelerate propagation)
+- Create integration tests with actual SigmaOS-accelerate systems and SigmaOS-accelerate integration
+- Implement SigmaOS-accelerate persistence and SigmaOS-accelerate state management
