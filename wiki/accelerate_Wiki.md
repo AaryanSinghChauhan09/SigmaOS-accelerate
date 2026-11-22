@@ -1,18 +1,18 @@
-# SigmaOS-SigmaOS-accelerate Component Wiki
+# SigmaOS-accelerate Component Wiki
 
 ## Overview
-SigmaOS-SigmaOS-accelerate provides Hardware acceleration framework with GPU/CPU/NPU detection, compute capability, and memory management for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
+SigmaOS-accelerate provides component for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
-- Single Responsibility
-- SigmaOS-accelerate Abstraction
-- Fail-Fast on SigmaOS-accelerate Initialization Errors
-- Deterministic SigmaOS-accelerate Setup
-- Clear Abstraction Over SigmaOS-accelerate APIs
-- Composition over Inheritance for SigmaOS-accelerate extensions
+- **Single Responsibility**: Each component has a single well-defined purpose
+- **SigmaOS-accelerate Abstraction**: Clear abstraction over the component's APIs and functionality
+- **Fail-Fast on SigmaOS-accelerate Initialization Errors**: Fail-fast principle for initialization errors
+- **Deterministic SigmaOS-accelerate Setup**: Deterministic initialization and configuration
+- **Clear Abstraction Over SigmaOS-accelerate APIs**: Well-defined, clear APIs
+- **Composition over Inheritance for SigmaOS-accelerate extensions**: Use composition patterns for extensions
 
 ## Architecture
-SigmaOS-SigmaOS-accelerate follows a SigmaOS-accelerate pattern:
+SigmaOS-accelerate follows a SigmaOS-accelerate pattern:
 - **SigmaOS-accelerate Core**: Provides SigmaOS-accelerate support, SigmaOS-accelerate management, and SigmaOS-accelerate tracking
 - **Management**: Supports SigmaOS-accelerate management, SigmaOS-accelerate configuration, and SigmaOS-accelerate lifecycle
 - **Tracking**: Supports SigmaOS-accelerate status, SigmaOS-accelerate tracking, and SigmaOS-accelerate lifecycle
@@ -20,10 +20,10 @@ SigmaOS-SigmaOS-accelerate follows a SigmaOS-accelerate pattern:
 
 ## API
 The component provides the following public APIs:
--  - Manage a SigmaOS-accelerate by given configuration
--  - Register a SigmaOS-accelerate by given name
--  - Get SigmaOS-accelerate status and SigmaOS-accelerate availability
--  - Track SigmaOS-accelerate management and SigmaOS-accelerate tracking
+- Manage a SigmaOS-accelerate by given configuration
+- Register a SigmaOS-accelerate by given name
+- Get SigmaOS-accelerate status and SigmaOS-accelerate availability
+- Track SigmaOS-accelerate management and SigmaOS-accelerate tracking
 - Error types for SigmaOS-accelerate failure scenarios or unsupported SigmaOS-accelerate types
 
 ## Test Structure (Arrange-Act-ASSERT)
@@ -32,11 +32,8 @@ All tests follow the AAA pattern:
 2. **Act**: Execute the code under test (SigmaOS-accelerate init, SigmaOS-accelerate management)
 3. **Assert**: Verify the expected SigmaOS-accelerate results
 
-Example:
-
-
 ## Development
-- Follows Rust best practices with 
+- Follows best practices with clear abstraction boundaries
 - SigmaOS-accelerate initialization is best-effort; gracefully degrades on unsupported configurations
 - Comprehensive error types for all SigmaOS-accelerate failure scenarios
 - Unit tests provided for SigmaOS-accelerate management and configuration
